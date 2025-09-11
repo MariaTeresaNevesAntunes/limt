@@ -1,12 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { HeroSection } from "@/components/HeroSection";
+import { WhatIsLimit } from "@/components/WhatIsLimit";
+import { LateralLimits } from "@/components/LateralLimits";
+import { NavigationDots } from "@/components/NavigationDots";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <div id="hero">
+        <HeroSection />
       </div>
+      
+      {/* Educational Content */}
+      <WhatIsLimit />
+      <LateralLimits />
+      
+      {/* Navigation */}
+      <NavigationDots />
     </div>
   );
 };
