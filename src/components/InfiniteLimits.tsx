@@ -2,7 +2,7 @@ import { Card } from "./ui/card";
 
 const InfiniteLimits = () => {
   return (
-    <section className="min-h-screen bg-gradient-hero p-8 flex flex-col justify-center">
+    <section id="infinite-limits" className="min-h-screen bg-gradient-hero p-8 flex flex-col justify-center">
       <div className="max-w-4xl mx-auto">
         <div className="animate-fade-in">
           <h2 className="text-4xl font-bold text-foreground mb-8 text-center">
