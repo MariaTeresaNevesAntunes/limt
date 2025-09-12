@@ -8,32 +8,32 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Mathematical theme - deep blues and purples */
-    --background: 240 10% 3.9%;
+    /* Green mathematical theme */
+    --background: 135 40% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 3.9%;
+    --card: 135 40% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 3.9%;
+    --popover: 135 40% 10%;
     --popover-foreground: 0 0% 98%;
 
-    /* Primary: Deep mathematical blue */
-    --primary: 221 83% 53%;
+    /* Primary: Deep green #244F26 */
+    --primary: 123 36% 23%;
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 221 83% 63%;
+    --primary-glow: 123 36% 33%;
 
-    /* Secondary: Rich purple for accents */
-    --secondary: 262 83% 58%;
+    /* Secondary: Medium green #256D1B */
+    --secondary: 115 58% 26%;
     --secondary-foreground: 0 0% 98%;
 
-    /* Muted: Subtle grays */
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
+    /* Muted: Darker background tones */
+    --muted: 135 40% 15%;
+    --muted-foreground: 135 10% 65%;
 
-    /* Accent: Golden highlight */
-    --accent: 47 96% 53%;
-    --accent-foreground: 240 10% 3.9%;
+    /* Accent: Bright lime green #1EFC1E */
+    --accent: 120 96% 55%;
+    --accent-foreground: 135 40% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -44,11 +44,11 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Mathematical gradients */
+    /* Green gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(115 64% 35%));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--secondary)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(215 27.9% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(135 40% 12%));
 
     /* Educational shadows */
     --shadow-card: 0 10px 30px -10px hsl(var(--primary) / 0.3);
