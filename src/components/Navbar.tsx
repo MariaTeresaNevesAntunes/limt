@@ -8,6 +8,7 @@ const navItems = [
   { id: 'what-is-limit', label: 'O que é um limite?', href: '#what-is-limit' },
   { id: 'lateral-limits', label: 'Limites Laterais', href: '#lateral-limits' },
   { id: 'infinite-limits', label: 'Limites Infinitos', href: '#infinite-limits' },
+  { id: 'indeterminations', label: 'Indeterminações', href: '#indeterminations' },
 ];
 
 export const Navbar = () => {

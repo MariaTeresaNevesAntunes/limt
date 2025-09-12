@@ -2,6 +2,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { WhatIsLimit } from "@/components/WhatIsLimit";
 import { LateralLimits } from "@/components/LateralLimits";
 import InfiniteLimits from "@/components/InfiniteLimits";
+import IndeterminationsSection from "@/components/IndeterminationsSection";
 import { NavigationDots } from "@/components/NavigationDots";
 import { Navbar } from "@/components/Navbar";
 
@@ -19,6 +20,7 @@ const Index = () => {
       <WhatIsLimit />
       <LateralLimits />
       <InfiniteLimits />
+      <IndeterminationsSection />
       
       {/* Navigation */}
       <NavigationDots />

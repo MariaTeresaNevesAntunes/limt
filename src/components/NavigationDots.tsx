@@ -6,6 +6,7 @@ const sections = [
   { id: 'what-is-limit', label: 'O que é um limite?' },
   { id: 'lateral-limits', label: 'Limites Laterais' },
   { id: 'infinite-limits', label: 'Limites Infinitos' },
+  { id: 'indeterminations', label: 'Indeterminações' },
 ];
 
 export const NavigationDots = () => {
