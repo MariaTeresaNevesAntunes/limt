@@ -70,7 +70,7 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('hero')}>
-            <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">📘 Limitt es</div>
+            <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">📘 Limites</div>
           </div>
 
           {/* Desktop Navigation */}
@@ -78,7 +78,7 @@ export const Navbar = () => {
             {navItems.map(({
             id,
             label
-          }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("text-sm font-medium transition-colors duration-200 hover:text-primary relative", activeSection === id ? "text-primary" : "text-muted-foreground")}>
+           }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("text-sm font-medium transition-colors duration-200 hover:text-primary relative", activeSection === id ? "text-primary" : "text-foreground/80")}>
                 {label}
                 {activeSection === id && <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />}
               </button>)}
@@ -98,7 +98,7 @@ export const Navbar = () => {
               {navItems.map(({
             id,
             label
-          }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200", activeSection === id ? "text-primary bg-primary/10" : "text-muted-foreground hover:text-primary hover:bg-muted/50")}>
+           }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200", activeSection === id ? "text-primary bg-primary/10" : "text-foreground/80 hover:text-primary hover:bg-muted/50")}>
                   {label}
                 </button>)}
             </div>
