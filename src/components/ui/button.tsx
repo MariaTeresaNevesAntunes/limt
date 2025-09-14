@@ -16,7 +16,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Mathematical education variants
-        hero: "bg-gradient-primary text-primary-foreground shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 pulse-glow",
+        hero: "bg-gradient-primary text-primary-foreground shadow-lg hover:shadow-xl hover:bg-gradient-to-r hover:from-primary-glow hover:to-primary active:bg-white/90 active:text-primary active:scale-95 transform hover:scale-105 transition-all duration-300 pulse-glow",
         mathematical: "bg-gradient-secondary text-secondary-foreground shadow-md hover:shadow-lg border border-primary/20",
         accent: "bg-gradient-accent text-accent-foreground shadow-md hover:shadow-lg font-semibold",
         formula: "bg-muted text-muted-foreground border border-border hover:bg-muted/80 font-mono",
