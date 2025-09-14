@@ -99,7 +99,7 @@ const IndeterminationsSection = () => {
 
             {/* Limite Logarítmico */}
             <div className="border-l-4 border-accent pl-6">
-              <h4 className="text-xl font-bold text-accent mb-3 flex items-center gap-2">
+              <h4 className="text-xl font-bold text-primary mb-3 flex items-center gap-2">
                 🔹 3. Limite logarítmico
               </h4>
               <div className="math-formula mb-3">
