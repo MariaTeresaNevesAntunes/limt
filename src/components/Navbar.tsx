@@ -78,9 +78,9 @@ export const Navbar = () => {
             {navItems.map(({
             id,
             label
-           }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("text-sm font-medium transition-colors duration-200 hover:text-primary relative", activeSection === id ? "text-primary" : "text-foreground/80")}>
+           }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("text-sm font-medium transition-colors duration-200 hover:text-primary relative", activeSection === id ? "text-white font-semibold" : "text-foreground/80")}>
                 {label}
-                {activeSection === id && <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />}
+                {activeSection === id && <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white rounded-full" />}
               </button>)}
           </div>
 
@@ -98,7 +98,7 @@ export const Navbar = () => {
               {navItems.map(({
             id,
             label
-           }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200", activeSection === id ? "text-primary bg-primary/10" : "text-foreground/80 hover:text-primary hover:bg-muted/50")}>
+           }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200", activeSection === id ? "text-white bg-white/10 font-semibold" : "text-foreground/80 hover:text-primary hover:bg-muted/50")}>
                   {label}
                 </button>)}
             </div>
