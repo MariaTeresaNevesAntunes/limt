@@ -33,7 +33,7 @@ const IndeterminationsSection = () => {
 
         {/* Exemplo Clássico */}
         <Card className="math-card animate-slide-in-left mb-12">
-          <h3 className="text-2xl font-bold text-secondary mb-6 flex items-center gap-2">
+          <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
             🔍 Exemplo clássico: 0/0
           </h3>
           
