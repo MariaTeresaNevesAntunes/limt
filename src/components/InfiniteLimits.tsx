@@ -1,6 +1,29 @@
 import { Card } from "./ui/card";
 import { Quiz } from "./Quiz";
+import { Flashcards } from "./Flashcards";
 
+const infiniteLimitsFlashcards = [
+  {
+    front: "O que é um limite infinito?",
+    back: "Quando a função cresce ou decresce sem limite ao aproximar-se de um ponto."
+  },
+  {
+    front: "Qual é lim(x→0⁺) 1/x?",
+    back: "+∞ (infinito positivo) - a função cresce sem parar."
+  },
+  {
+    front: "Qual é lim(x→∞) 1/x?",
+    back: "0 - à medida que x cresce, 1/x aproxima-se de zero."
+  },
+  {
+    front: "O que é uma assíntota horizontal?",
+    back: "Uma reta horizontal que a função se aproxima quando x → ±∞"
+  },
+  {
+    front: "O que é uma assíntota vertical?",
+    back: "Uma reta vertical onde a função tende para ±∞"
+  }
+];
 const infiniteLimitsQuestions = [
   {
     question: "O que é um limite infinito?",
@@ -130,6 +153,11 @@ const InfiniteLimits = () => {
             </li>
           </ul>
         </Card>
+
+        {/* Flashcards Section */}
+        <div className="animate-fade-in mb-8">
+          <Flashcards title="🃏 Flashcards: Limites Infinitos" cards={infiniteLimitsFlashcards} />
+        </div>
 
         {/* Quiz Section */}
         <div className="animate-fade-in mb-12">
