@@ -13,7 +13,7 @@ export const HeroSection = () => {
         </div>
         
         <h1 className="text-5xl md:text-7xl font-heading font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent leading-tight">
-          MTN – Matemática Sem Limites
+          MTNA – Matemática Sem Limites
         </h1>
         
         <h2 className="text-2xl md:text-3xl font-heading font-semibold text-foreground/90 mb-8">

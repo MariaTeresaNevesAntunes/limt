@@ -74,7 +74,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <div className="text-xl font-heading font-bold">
-              <span className="text-primary">MTN</span>
+              <span className="text-primary">MTNA</span>
               <span className="text-muted-foreground font-medium"> – Matemática Sem Limites</span>
             </div>
           </Link>
