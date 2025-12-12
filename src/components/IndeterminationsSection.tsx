@@ -102,8 +102,8 @@ const IndeterminationsSection = () => {
             </div>
             
             <p className="text-foreground">Substituindo diretamente:</p>
-            <div className="math-formula bg-red-100 dark:bg-red-900/20 p-3 rounded">
-              (2² - 4)/(2 - 2) = 0/0
+            <div className="bg-red-200 dark:bg-red-900/40 p-3 rounded border border-red-300 dark:border-red-700">
+              <span className="font-mono text-red-900 dark:text-red-200">(2² - 4)/(2 - 2) = 0/0</span>
             </div>
             
             <p className="text-foreground">Mas se fatorarmos o numerador:</p>
@@ -112,8 +112,8 @@ const IndeterminationsSection = () => {
             </div>
             
             <p className="text-foreground">Cancelamos x - 2 e obtemos:</p>
-            <div className="math-formula bg-green-100 dark:bg-green-900/20 p-3 rounded">
-              lim<sub>x→2</sub> x + 2 = 4
+            <div className="bg-green-200 dark:bg-green-900/40 p-3 rounded border border-green-300 dark:border-green-700">
+              <span className="font-mono text-green-900 dark:text-green-200">lim<sub>x→2</sub> x + 2 = 4</span>
             </div>
             
             <p className="text-accent font-semibold">✅ O limite existe — só precisávamos de simplificar.</p>
