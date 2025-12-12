@@ -72,7 +72,7 @@ const IndeterminationsSection = () => {
 
           <div className="space-y-8">
             {/* Limite Trigonométrico */}
-            <div className="border-l-4 border-primary pl-6">
+            <div className="border-l-4 border-secondary pl-6">
               <h4 className="text-xl font-bold text-secondary mb-3 flex items-center gap-2">
                 🔸 1. Limite trigonométrico
               </h4>
@@ -98,7 +98,7 @@ const IndeterminationsSection = () => {
             </div>
 
             {/* Limite Logarítmico */}
-            <div className="border-l-4 border-accent pl-6">
+            <div className="border-l-4 border-secondary pl-6">
               <h4 className="text-xl font-bold text-secondary mb-3 flex items-center gap-2">
                 🔸 3. Limite logarítmico
               </h4>
