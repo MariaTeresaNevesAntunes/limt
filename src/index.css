@@ -14,12 +14,12 @@ All colors MUST be HSL.
     /* Foreground: #424242 - Dark gray for text */
     --foreground: 0 0% 26%;
 
-    /* Card: Slightly darker than background */
-    --card: 125 35% 98%;
-    --card-foreground: 0 0% 26%;
+    /* Card: White for better contrast */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
 
-    --popover: 125 35% 98%;
-    --popover-foreground: 0 0% 26%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
 
     /* Primary: #2E7D32 - Forest green */
     --primary: 123 46% 34%;
@@ -30,8 +30,8 @@ All colors MUST be HSL.
     --secondary: 123 38% 64%;
     --secondary-foreground: 0 0% 26%;
 
-    /* Muted: Soft background tones */
-    --muted: 125 30% 90%;
+    /* Muted: Soft background tones with better contrast */
+    --muted: 125 20% 88%;
     --muted-foreground: 0 0% 40%;
 
     /* Accent: #81C784 - Light green */
@@ -41,8 +41,8 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 125 25% 85%;
-    --input: 125 25% 85%;
+    --border: 123 30% 75%;
+    --input: 123 30% 75%;
     --ring: 123 46% 34%;
 
     --radius: 0.75rem;
