@@ -1,4 +1,63 @@
 import { Card } from "./ui/card";
+import { Quiz } from "./Quiz";
+
+const indeterminationsQuestions = [
+  {
+    question: "Qual destas é uma forma indeterminada?",
+    options: [
+      "5/0",
+      "0/0",
+      "1/0",
+      "0/5"
+    ],
+    correctAnswer: 1,
+    explanation: "0/0 é uma forma indeterminada clássica. 5/0 e 1/0 tendem para infinito, e 0/5 = 0."
+  },
+  {
+    question: "Para resolver lim(x→2) (x²-4)/(x-2), devemos:",
+    options: [
+      "Substituir x por 2 diretamente",
+      "Fatorar o numerador e simplificar",
+      "Usar a regra do hospital",
+      "Dizer que não existe"
+    ],
+    correctAnswer: 1,
+    explanation: "Fatorando: (x²-4) = (x-2)(x+2), podemos simplificar e obter lim(x→2) (x+2) = 4."
+  },
+  {
+    question: "Qual é o valor de lim(x→0) sin(x)/x?",
+    options: [
+      "0",
+      "∞",
+      "1",
+      "Não existe"
+    ],
+    correctAnswer: 2,
+    explanation: "Este é um dos limites notáveis fundamentais: lim(x→0) sin(x)/x = 1."
+  },
+  {
+    question: "O limite lim(x→0) (eˣ - 1)/x é igual a:",
+    options: [
+      "0",
+      "e",
+      "1",
+      "∞"
+    ],
+    correctAnswer: 2,
+    explanation: "Este é outro limite notável: lim(x→0) (eˣ - 1)/x = 1."
+  },
+  {
+    question: "Qual destas NÃO é uma forma indeterminada?",
+    options: [
+      "∞ - ∞",
+      "0 · ∞",
+      "5/∞",
+      "1^∞"
+    ],
+    correctAnswer: 2,
+    explanation: "5/∞ = 0, é determinado. As outras (∞-∞, 0·∞, 1^∞) são formas indeterminadas."
+  }
+];
 
 const IndeterminationsSection = () => {
   return (
@@ -171,6 +230,11 @@ const IndeterminationsSection = () => {
             </div>
           </div>
         </Card>
+
+        {/* Quiz Section */}
+        <div className="animate-fade-in mb-12">
+          <Quiz title="📝 Quiz: Indeterminações" questions={indeterminationsQuestions} />
+        </div>
 
         {/* Frase de apoio */}
         <div className="text-center animate-bounce-gentle">

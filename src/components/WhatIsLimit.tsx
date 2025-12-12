@@ -1,4 +1,47 @@
 import { Brain, ArrowRight } from "lucide-react";
+import { Quiz } from "./Quiz";
+
+const whatIsLimitQuestions = [
+  {
+    question: "O que descreve um limite em matemática?",
+    options: [
+      "O valor máximo de uma função",
+      "O valor que uma função se aproxima quando x tende a um ponto",
+      "O ponto onde a função cruza o eixo x",
+      "A derivada da função"
+    ],
+    correctAnswer: 1,
+    explanation: "Um limite descreve o valor que uma função se aproxima à medida que a variável x se aproxima de um determinado ponto."
+  },
+  {
+    question: "Se f(x) = 2x, qual é lim(x→3) f(x)?",
+    options: ["3", "2", "6", "5"],
+    correctAnswer: 2,
+    explanation: "Quando x se aproxima de 3, f(x) = 2×3 = 6."
+  },
+  {
+    question: "Na analogia da ponte, o limite representa:",
+    options: [
+      "A ponte em si",
+      "O ponto de partida",
+      "Onde a ponte termina (mesmo sem a cruzar)",
+      "A velocidade ao atravessar"
+    ],
+    correctAnswer: 2,
+    explanation: "O limite é como ver onde a ponte termina — podemos saber o destino sem realmente lá chegar."
+  },
+  {
+    question: "Qual é a notação correta para 'limite de f(x) quando x tende a 5'?",
+    options: [
+      "f(5) = lim",
+      "lim(x→5) f(x)",
+      "x → f(5)",
+      "lim f(x) = 5"
+    ],
+    correctAnswer: 1,
+    explanation: "A notação correta é lim(x→5) f(x), que se lê 'limite de f(x) quando x tende a 5'."
+  }
+];
 
 export const WhatIsLimit = () => {
   return (
@@ -62,6 +105,11 @@ export const WhatIsLimit = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Quiz Section */}
+        <div className="mt-16 animate-fade-in">
+          <Quiz title="📝 Quiz: O que é um limite?" questions={whatIsLimitQuestions} />
         </div>
       </div>
     </section>
