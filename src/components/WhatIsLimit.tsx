@@ -1,6 +1,25 @@
 import { Brain, ArrowRight } from "lucide-react";
 import { Quiz } from "./Quiz";
+import { Flashcards } from "./Flashcards";
 
+const whatIsLimitFlashcards = [
+  {
+    front: "O que é um limite?",
+    back: "O valor que uma função se aproxima quando a variável x se aproxima de um determinado ponto."
+  },
+  {
+    front: "Qual a notação de limite?",
+    back: "lim(x→a) f(x) - lê-se 'limite de f(x) quando x tende a a'"
+  },
+  {
+    front: "Se f(x) = 2x, qual é lim(x→3) f(x)?",
+    back: "O limite é 6, pois f(3) = 2 × 3 = 6"
+  },
+  {
+    front: "Analogia da ponte para limites?",
+    back: "Podemos ver onde a ponte termina sem a cruzar - o limite é o destino, não a chegada."
+  }
+];
 const whatIsLimitQuestions = [
   {
     question: "O que descreve um limite em matemática?",
@@ -107,8 +126,13 @@ export const WhatIsLimit = () => {
           </div>
         </div>
 
+        {/* Flashcards Section */}
+        <div className="mt-12 animate-fade-in">
+          <Flashcards title="🃏 Flashcards: O que é um limite?" cards={whatIsLimitFlashcards} />
+        </div>
+
         {/* Quiz Section */}
-        <div className="mt-16 animate-fade-in">
+        <div className="mt-8 animate-fade-in">
           <Quiz title="📝 Quiz: O que é um limite?" questions={whatIsLimitQuestions} />
         </div>
       </div>

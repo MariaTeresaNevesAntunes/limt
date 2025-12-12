@@ -1,6 +1,29 @@
 import { Card } from "./ui/card";
 import { Quiz } from "./Quiz";
+import { Flashcards } from "./Flashcards";
 
+const indeterminationsFlashcards = [
+  {
+    front: "Quais são as formas indeterminadas?",
+    back: "0/0, ∞/∞, ∞-∞, 0·∞, 1^∞, 0^0, ∞^0"
+  },
+  {
+    front: "lim(x→0) sin(x)/x = ?",
+    back: "1 - Este é um limite notável fundamental."
+  },
+  {
+    front: "lim(x→0) (eˣ - 1)/x = ?",
+    back: "1 - Limite notável exponencial."
+  },
+  {
+    front: "lim(x→0) ln(1+x)/x = ?",
+    back: "1 - Limite notável logarítmico."
+  },
+  {
+    front: "Como resolver 0/0?",
+    back: "Fatorar, simplificar, usar limites notáveis ou regra de L'Hôpital."
+  }
+];
 const indeterminationsQuestions = [
   {
     question: "Qual destas é uma forma indeterminada?",
@@ -230,6 +253,11 @@ const IndeterminationsSection = () => {
             </div>
           </div>
         </Card>
+
+        {/* Flashcards Section */}
+        <div className="animate-fade-in mb-8">
+          <Flashcards title="🃏 Flashcards: Indeterminações" cards={indeterminationsFlashcards} />
+        </div>
 
         {/* Quiz Section */}
         <div className="animate-fade-in mb-12">

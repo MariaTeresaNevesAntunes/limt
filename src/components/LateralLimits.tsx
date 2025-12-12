@@ -1,6 +1,29 @@
 import { Navigation, ArrowLeft, ArrowRight } from "lucide-react";
 import { Quiz } from "./Quiz";
+import { Flashcards } from "./Flashcards";
 
+const lateralLimitsFlashcards = [
+  {
+    front: "O que significa lim(x→a⁻)?",
+    back: "Limite pela esquerda - aproximamo-nos de 'a' por valores menores."
+  },
+  {
+    front: "O que significa lim(x→a⁺)?",
+    back: "Limite pela direita - aproximamo-nos de 'a' por valores maiores."
+  },
+  {
+    front: "Quando é que o limite existe?",
+    back: "Quando os limites laterais são iguais: lim(x→a⁻) = lim(x→a⁺)"
+  },
+  {
+    front: "Se lim(x→1⁻) = 2 e lim(x→1⁺) = 5, o limite existe?",
+    back: "Não! Os limites laterais são diferentes (2 ≠ 5), logo o limite não existe."
+  },
+  {
+    front: "O que é uma descontinuidade de salto?",
+    back: "Quando os limites laterais existem mas são diferentes - a função 'salta' de um valor para outro."
+  }
+];
 const lateralLimitsQuestions = [
   {
     question: "O que significa lim(x→a⁻) f(x)?",
@@ -182,6 +205,11 @@ export const LateralLimits = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Flashcards Section */}
+        <div className="animate-fade-in mb-8">
+          <Flashcards title="🃏 Flashcards: Limites Laterais" cards={lateralLimitsFlashcards} />
         </div>
 
         {/* Quiz Section */}
