@@ -79,9 +79,29 @@ const IndeterminationsSection = () => {
               <div className="math-formula mb-3">
                 lim<sub>x→0</sub> sin(x)/x = 1
               </div>
-              <p className="text-foreground/80">
+              <p className="text-foreground/80 mb-4">
                 Usado para resolver indeterminações envolvendo funções trigonométricas.
               </p>
+              
+              {/* Exemplo Resolvido */}
+              <div className="bg-secondary/10 p-4 rounded-lg space-y-3">
+                <p className="text-sm font-semibold text-secondary">📝 Exercício resolvido:</p>
+                <div className="math-formula text-sm">
+                  lim<sub>x→0</sub> sin(3x)/x
+                </div>
+                <p className="text-foreground/70 text-sm">
+                  <strong>Passo 1:</strong> Multiplicamos e dividimos por 3:
+                </p>
+                <div className="math-formula text-sm">
+                  = lim<sub>x→0</sub> 3 · sin(3x)/(3x)
+                </div>
+                <p className="text-foreground/70 text-sm">
+                  <strong>Passo 2:</strong> Fazemos u = 3x, quando x→0, u→0:
+                </p>
+                <div className="math-formula text-sm">
+                  = 3 · lim<sub>u→0</sub> sin(u)/u = 3 · 1 = <span className="text-accent font-bold">3</span>
+                </div>
+              </div>
             </div>
 
             {/* Limite Exponencial */}
@@ -92,9 +112,29 @@ const IndeterminationsSection = () => {
               <div className="math-formula mb-3">
                 lim<sub>x→0</sub> (e<sup>x</sup> - 1)/x = 1
               </div>
-              <p className="text-foreground/80">
+              <p className="text-foreground/80 mb-4">
                 Essencial para funções exponenciais e logarítmicas.
               </p>
+              
+              {/* Exemplo Resolvido */}
+              <div className="bg-secondary/10 p-4 rounded-lg space-y-3">
+                <p className="text-sm font-semibold text-secondary">📝 Exercício resolvido:</p>
+                <div className="math-formula text-sm">
+                  lim<sub>x→0</sub> (e<sup>2x</sup> - 1)/x
+                </div>
+                <p className="text-foreground/70 text-sm">
+                  <strong>Passo 1:</strong> Multiplicamos e dividimos por 2:
+                </p>
+                <div className="math-formula text-sm">
+                  = lim<sub>x→0</sub> 2 · (e<sup>2x</sup> - 1)/(2x)
+                </div>
+                <p className="text-foreground/70 text-sm">
+                  <strong>Passo 2:</strong> Fazemos u = 2x, quando x→0, u→0:
+                </p>
+                <div className="math-formula text-sm">
+                  = 2 · lim<sub>u→0</sub> (e<sup>u</sup> - 1)/u = 2 · 1 = <span className="text-accent font-bold">2</span>
+                </div>
+              </div>
             </div>
 
             {/* Limite Logarítmico */}
@@ -105,9 +145,29 @@ const IndeterminationsSection = () => {
               <div className="math-formula mb-3">
                 lim<sub>x→0</sub> ln(1 + x)/x = 1
               </div>
-              <p className="text-foreground/80">
+              <p className="text-foreground/80 mb-4">
                 Muito útil em cálculo avançado e aplicações em economia e física.
               </p>
+              
+              {/* Exemplo Resolvido */}
+              <div className="bg-secondary/10 p-4 rounded-lg space-y-3">
+                <p className="text-sm font-semibold text-secondary">📝 Exercício resolvido:</p>
+                <div className="math-formula text-sm">
+                  lim<sub>x→0</sub> ln(1 + 5x)/x
+                </div>
+                <p className="text-foreground/70 text-sm">
+                  <strong>Passo 1:</strong> Multiplicamos e dividimos por 5:
+                </p>
+                <div className="math-formula text-sm">
+                  = lim<sub>x→0</sub> 5 · ln(1 + 5x)/(5x)
+                </div>
+                <p className="text-foreground/70 text-sm">
+                  <strong>Passo 2:</strong> Fazemos u = 5x, quando x→0, u→0:
+                </p>
+                <div className="math-formula text-sm">
+                  = 5 · lim<sub>u→0</sub> ln(1 + u)/u = 5 · 1 = <span className="text-accent font-bold">5</span>
+                </div>
+              </div>
             </div>
           </div>
         </Card>
