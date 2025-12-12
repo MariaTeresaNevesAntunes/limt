@@ -84,18 +84,18 @@ const IndeterminationsSection = () => {
               </p>
               
               {/* Exemplo Resolvido */}
-              <div className="bg-secondary/10 p-4 rounded-lg space-y-3">
-                <p className="text-sm font-semibold text-secondary">📝 Exercício resolvido:</p>
+              <div className="bg-background/80 border border-border p-4 rounded-lg space-y-3">
+                <p className="text-sm font-semibold text-primary">📝 Exercício resolvido:</p>
                 <div className="math-formula text-sm">
                   lim<sub>x→0</sub> sin(3x)/x
                 </div>
-                <p className="text-foreground/70 text-sm">
+                <p className="text-foreground text-sm">
                   <strong>Passo 1:</strong> Multiplicamos e dividimos por 3:
                 </p>
                 <div className="math-formula text-sm">
                   = lim<sub>x→0</sub> 3 · sin(3x)/(3x)
                 </div>
-                <p className="text-foreground/70 text-sm">
+                <p className="text-foreground text-sm">
                   <strong>Passo 2:</strong> Fazemos u = 3x, quando x→0, u→0:
                 </p>
                 <div className="math-formula text-sm">
@@ -117,18 +117,18 @@ const IndeterminationsSection = () => {
               </p>
               
               {/* Exemplo Resolvido */}
-              <div className="bg-secondary/10 p-4 rounded-lg space-y-3">
-                <p className="text-sm font-semibold text-secondary">📝 Exercício resolvido:</p>
+              <div className="bg-background/80 border border-border p-4 rounded-lg space-y-3">
+                <p className="text-sm font-semibold text-primary">📝 Exercício resolvido:</p>
                 <div className="math-formula text-sm">
                   lim<sub>x→0</sub> (e<sup>2x</sup> - 1)/x
                 </div>
-                <p className="text-foreground/70 text-sm">
+                <p className="text-foreground text-sm">
                   <strong>Passo 1:</strong> Multiplicamos e dividimos por 2:
                 </p>
                 <div className="math-formula text-sm">
                   = lim<sub>x→0</sub> 2 · (e<sup>2x</sup> - 1)/(2x)
                 </div>
-                <p className="text-foreground/70 text-sm">
+                <p className="text-foreground text-sm">
                   <strong>Passo 2:</strong> Fazemos u = 2x, quando x→0, u→0:
                 </p>
                 <div className="math-formula text-sm">
@@ -150,18 +150,18 @@ const IndeterminationsSection = () => {
               </p>
               
               {/* Exemplo Resolvido */}
-              <div className="bg-secondary/10 p-4 rounded-lg space-y-3">
-                <p className="text-sm font-semibold text-secondary">📝 Exercício resolvido:</p>
+              <div className="bg-background/80 border border-border p-4 rounded-lg space-y-3">
+                <p className="text-sm font-semibold text-primary">📝 Exercício resolvido:</p>
                 <div className="math-formula text-sm">
                   lim<sub>x→0</sub> ln(1 + 5x)/x
                 </div>
-                <p className="text-foreground/70 text-sm">
+                <p className="text-foreground text-sm">
                   <strong>Passo 1:</strong> Multiplicamos e dividimos por 5:
                 </p>
                 <div className="math-formula text-sm">
                   = lim<sub>x→0</sub> 5 · ln(1 + 5x)/(5x)
                 </div>
-                <p className="text-foreground/70 text-sm">
+                <p className="text-foreground text-sm">
                   <strong>Passo 2:</strong> Fazemos u = 5x, quando x→0, u→0:
                 </p>
                 <div className="math-formula text-sm">
