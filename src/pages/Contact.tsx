@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, MessageSquare, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import { SEO } from "@/components/SEO";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Nome é obrigatório").max(100, "Nome muito longo"),
@@ -71,6 +72,10 @@ const Contact = () => {
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-background">
+        <SEO 
+          title="Contato"
+          description="Entra em contacto com a equipa Limites Matemáticos. Dúvidas, sugestões ou colaborações - resposta em até 48 horas."
+        />
         <Navbar />
         <main className="pt-24 pb-16">
           <div className="max-w-xl mx-auto px-4 text-center">
@@ -93,6 +98,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contato"
+        description="Entra em contacto com a equipa Limites Matemáticos. Dúvidas, sugestões ou colaborações - resposta em até 48 horas."
+      />
       <Navbar />
       
       <main className="pt-24 pb-16">

@@ -2,10 +2,15 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Users, BookOpen, Award } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Sobre"
+        description="Conhece o projeto Limites Matemáticos. Uma plataforma educativa dedicada a tornar o conceito de limites acessível para todos os estudantes."
+      />
       <Navbar />
       
       <main className="pt-24 pb-16">
