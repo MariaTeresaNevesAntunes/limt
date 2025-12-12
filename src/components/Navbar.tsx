@@ -70,7 +70,7 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('hero')}>
-            <div className="text-2xl font-bold text-white">📘 Limites</div>
+            <div className="text-2xl font-bold text-white">📘 <span className="text-primary">Lim</span>ites</div>
           </div>
 
           {/* Desktop Navigation */}
