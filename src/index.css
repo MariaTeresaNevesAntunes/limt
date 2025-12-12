@@ -8,52 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Green mathematical theme */
-    --background: 135 40% 12%;
-    --foreground: 0 0% 98%;
+    /* Light green educational theme */
+    /* Background: #E8F5E9 - Soft green */
+    --background: 125 39% 94%;
+    /* Foreground: #424242 - Dark gray for text */
+    --foreground: 0 0% 26%;
 
-    --card: 135 40% 14%;
-    --card-foreground: 0 0% 98%;
+    /* Card: Slightly darker than background */
+    --card: 125 35% 98%;
+    --card-foreground: 0 0% 26%;
 
-    --popover: 135 40% 14%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 125 35% 98%;
+    --popover-foreground: 0 0% 26%;
 
-    /* Primary: Deep green #244F26 */
-    --primary: 123 36% 23%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 123 36% 33%;
+    /* Primary: #2E7D32 - Forest green */
+    --primary: 123 46% 34%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 123 46% 44%;
 
-    /* Secondary: Medium green #256D1B */
-    --secondary: 115 58% 26%;
-    --secondary-foreground: 0 0% 98%;
+    /* Secondary: Lighter forest green */
+    --secondary: 123 38% 64%;
+    --secondary-foreground: 0 0% 26%;
 
-    /* Muted: Darker background tones */
-    --muted: 135 40% 18%;
-    --muted-foreground: 135 10% 75%;
+    /* Muted: Soft background tones */
+    --muted: 125 30% 90%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Accent: Bright lime green #1EFC1E */
-    --accent: 120 96% 55%;
-    --accent-foreground: 135 40% 8%;
+    /* Accent: #81C784 - Light green */
+    --accent: 123 38% 64%;
+    --accent-foreground: 0 0% 26%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 135 30% 20%;
-    --input: 135 30% 20%;
-    --ring: 221 83% 53%;
+    --border: 125 25% 85%;
+    --input: 125 25% 85%;
+    --ring: 123 46% 34%;
 
     --radius: 0.75rem;
 
     /* Green gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(115 64% 35%));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--secondary)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(135 40% 16%));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(123 38% 74%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(125 35% 90%));
 
     /* Educational shadows */
-    --shadow-card: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
-    --shadow-accent: 0 5px 20px -5px hsl(var(--accent) / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.2);
+    --shadow-accent: 0 5px 20px -5px hsl(var(--accent) / 0.2);
 
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
