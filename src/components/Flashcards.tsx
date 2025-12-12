@@ -48,7 +48,7 @@ export const Flashcards = ({ title, cards }: FlashcardsProps) => {
   const progress = ((currentIndex + 1) / cards.length) * 100;
 
   return (
-    <Card className="p-6 bg-card border-border">
+    <Card className="p-6 bg-card border-primary/20 shadow-lg">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-xl font-bold text-foreground">{title}</h3>
         <div className="flex items-center gap-2">
@@ -86,24 +86,24 @@ export const Flashcards = ({ title, cards }: FlashcardsProps) => {
         >
           {/* Front */}
           <div 
-            className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl p-6 flex flex-col items-center justify-center border-2 border-primary/30"
+            className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-primary/15 to-secondary/25 rounded-xl p-6 flex flex-col items-center justify-center border-2 border-primary/40 shadow-inner"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <p className="text-sm text-muted-foreground mb-2">Pergunta</p>
-            <p className="text-lg text-center text-foreground font-medium">{card.front}</p>
+            <p className="text-sm text-primary font-medium mb-2">Pergunta</p>
+            <p className="text-lg text-center text-foreground font-semibold">{card.front}</p>
             <p className="text-xs text-muted-foreground mt-4">Clique para ver a resposta</p>
           </div>
 
           {/* Back */}
           <div 
-            className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl p-6 flex flex-col items-center justify-center border-2 border-accent/30"
+            className="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-secondary/30 to-accent/40 rounded-xl p-6 flex flex-col items-center justify-center border-2 border-secondary/50 shadow-inner"
             style={{ 
               backfaceVisibility: "hidden",
               transform: "rotateY(180deg)"
             }}
           >
-            <p className="text-sm text-muted-foreground mb-2">Resposta</p>
-            <p className="text-lg text-center text-foreground font-medium">{card.back}</p>
+            <p className="text-sm text-primary font-medium mb-2">Resposta</p>
+            <p className="text-lg text-center text-foreground font-semibold">{card.back}</p>
             <p className="text-xs text-muted-foreground mt-4">Clique para voltar</p>
           </div>
         </div>

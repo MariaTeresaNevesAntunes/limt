@@ -9,17 +9,17 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/85 shadow-sm",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        outline: "border-2 border-primary/40 bg-card text-foreground hover:bg-primary hover:text-primary-foreground transition-colors",
+        secondary: "bg-secondary text-primary-foreground hover:bg-secondary/80 shadow-sm",
+        ghost: "hover:bg-primary/10 hover:text-primary",
+        link: "text-primary underline-offset-4 hover:underline font-medium",
         // Mathematical education variants
-        hero: "bg-gradient-primary text-primary-foreground shadow-lg hover:shadow-xl hover:bg-gradient-to-r hover:from-primary-glow hover:to-primary active:bg-white/90 active:text-primary active:scale-95 transform hover:scale-105 transition-all duration-300 pulse-glow",
-        mathematical: "bg-gradient-secondary text-secondary-foreground shadow-md hover:shadow-lg border border-primary/20",
-        accent: "bg-gradient-accent text-accent-foreground shadow-md hover:shadow-lg font-semibold",
-        formula: "bg-muted text-muted-foreground border border-border hover:bg-muted/80 font-mono",
+        hero: "bg-primary text-primary-foreground shadow-lg hover:shadow-xl hover:bg-primary/90 active:scale-95 transform hover:scale-105 transition-all duration-300",
+        mathematical: "bg-secondary text-primary-foreground shadow-md hover:shadow-lg hover:bg-secondary/80 border border-secondary/50",
+        accent: "bg-accent text-foreground shadow-md hover:shadow-lg hover:bg-accent/80 font-semibold border border-accent/50",
+        formula: "bg-muted text-foreground border-2 border-border hover:bg-muted/80 font-mono",
       },
       size: {
         default: "h-10 px-4 py-2",
