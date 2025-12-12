@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="MTN – Matemática Sem Limites"
+        title="MTNA – Matemática Sem Limites"
         description="Plataforma educativa gratuita para aprender limites matemáticos. Explicações claras, exemplos práticos e exercícios sobre limites laterais, infinitos e indeterminações."
       />
       {/* Navigation Bar */}

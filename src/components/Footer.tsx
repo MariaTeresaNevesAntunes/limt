@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="max-w-4xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-heading font-bold text-lg">
-            <span className="text-primary">MTN</span>
+            <span className="text-primary">MTNA</span>
             <span className="text-muted-foreground font-medium text-sm"> – Matemática Sem Limites</span>
           </div>
           
@@ -55,7 +55,7 @@ export const Footer = () => {
         
         <div className="text-center mt-6 pt-6 border-t border-border">
           <p className="text-sm text-muted-foreground">
-            © 2025 MTN – Matemática Sem Limites. Todos os direitos reservados.
+            © 2025 MTNA – Matemática Sem Limites. Todos os direitos reservados.
           </p>
         </div>
       </div>

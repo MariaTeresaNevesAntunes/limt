@@ -13,7 +13,7 @@ export const SEO = ({
   canonical,
   type = "website" 
 }: SEOProps) => {
-  const siteTitle = "MTN – Matemática Sem Limites";
+  const siteTitle = "MTNA – Matemática Sem Limites";
   const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
 
   return (
