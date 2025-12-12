@@ -9,7 +9,7 @@ export const LateralLimits = () => {
             <Navigation className="w-10 h-10 text-secondary" />
             <h2 className="text-4xl md:text-5xl font-bold">🧭 Limites Laterais</h2>
           </div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
             Nem sempre nos aproximamos de um ponto da mesma forma. Às vezes, o comportamento da função 
             muda dependendo do lado por onde nos aproximamos.
           </p>
@@ -27,7 +27,7 @@ export const LateralLimits = () => {
                 lim<sub className="text-sm">x → a⁻</sub> f(x)
               </div>
               
-              <p className="text-muted-foreground">
+              <p className="text-foreground/80">
                 Significa que estamos a aproximar-nos de <span className="font-mono text-primary">a</span> vindo 
                 de valores <strong>menores</strong> que <span className="font-mono text-primary">a</span>.
               </p>
@@ -52,7 +52,7 @@ export const LateralLimits = () => {
                 lim<sub className="text-sm">x → a⁺</sub> f(x)
               </div>
               
-              <p className="text-muted-foreground">
+              <p className="text-foreground/80">
                 Significa que estamos a aproximar-nos de <span className="font-mono text-primary">a</span> vindo 
                 de valores <strong>maiores</strong> que <span className="font-mono text-primary">a</span>.
               </p>
@@ -70,7 +70,7 @@ export const LateralLimits = () => {
         <div className="math-card animate-scale-in">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">📊 Exemplo visual</h3>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-foreground/80">
               Imagina uma função com um salto — como uma escada.
             </p>
           </div>

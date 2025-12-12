@@ -8,7 +8,7 @@ const InfiniteLimits = () => {
           <h2 className="text-4xl font-bold text-foreground mb-8 text-center">
             🚀 Limites Infinitos e no Infinito
           </h2>
-          <p className="text-xl text-muted-foreground mb-12 text-center">
+          <p className="text-xl text-foreground/80 mb-12 text-center">
             Nem todos os limites têm um valor finito. Às vezes, uma função cresce sem parar ou aproxima-se de zero à medida que avançamos para o infinito. Estes são os limites infinitos e os limites no infinito.
           </p>
         </div>
@@ -29,7 +29,7 @@ const InfiniteLimits = () => {
               lim<sub>x→0<sup>+</sup></sub> 1/x = +∞
             </div>
             
-            <p className="text-muted-foreground">
+            <p className="text-foreground/80">
               À medida que x se aproxima de 0 pela direita, o valor de 1/x cresce sem parar.
             </p>
           </Card>
@@ -49,7 +49,7 @@ const InfiniteLimits = () => {
               lim<sub>x→∞</sub> 1/x = 0
             </div>
             
-            <p className="text-muted-foreground">
+            <p className="text-foreground/80">
               À medida que x cresce, 1/x torna-se cada vez mais pequeno, aproximando-se de zero.
             </p>
           </Card>

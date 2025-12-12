@@ -8,7 +8,7 @@ const IndeterminationsSection = () => {
           <h2 className="text-4xl font-bold text-foreground mb-8 text-center">
             ⚠️ Indeterminações: Quando o limite não se revela de imediato
           </h2>
-          <p className="text-xl text-muted-foreground mb-12 text-center">
+          <p className="text-xl text-foreground/80 mb-12 text-center">
             Nem todos os limites podem ser calculados diretamente. Às vezes, ao substituir o valor na função, obtemos expressões indeterminadas.
           </p>
         </div>
@@ -26,7 +26,7 @@ const IndeterminationsSection = () => {
             <div className="math-formula">1<sup>∞</sup></div>
             <div className="math-formula">0<sup>0</sup></div>
           </div>
-          <p className="text-muted-foreground mt-6 text-center">
+          <p className="text-foreground/80 mt-6 text-center">
             Estas são chamadas formas indeterminadas, porque não nos dizem qual é o valor do limite — precisamos de transformar a expressão para descobrir.
           </p>
         </Card>
@@ -66,7 +66,7 @@ const IndeterminationsSection = () => {
           <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
             🧠 Limites Notáveis: Ferramentas para resolver indeterminações
           </h3>
-          <p className="text-muted-foreground mb-8 text-center">
+          <p className="text-foreground/80 mb-8 text-center">
             Estes são limites que aparecem frequentemente e que devemos conhecer de cor:
           </p>
 
@@ -79,7 +79,7 @@ const IndeterminationsSection = () => {
               <div className="math-formula mb-3">
                 lim<sub>x→0</sub> sin(x)/x = 1
               </div>
-              <p className="text-muted-foreground">
+              <p className="text-foreground/80">
                 Usado para resolver indeterminações envolvendo funções trigonométricas.
               </p>
             </div>
@@ -92,7 +92,7 @@ const IndeterminationsSection = () => {
               <div className="math-formula mb-3">
                 lim<sub>x→0</sub> (e<sup>x</sup> - 1)/x = 1
               </div>
-              <p className="text-muted-foreground">
+              <p className="text-foreground/80">
                 Essencial para funções exponenciais e logarítmicas.
               </p>
             </div>
@@ -105,7 +105,7 @@ const IndeterminationsSection = () => {
               <div className="math-formula mb-3">
                 lim<sub>x→0</sub> ln(1 + x)/x = 1
               </div>
-              <p className="text-muted-foreground">
+              <p className="text-foreground/80">
                 Muito útil em cálculo avançado e aplicações em economia e física.
               </p>
             </div>

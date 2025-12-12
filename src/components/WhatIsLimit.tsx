@@ -13,7 +13,7 @@ export const WhatIsLimit = () => {
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-slide-in-left">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-foreground/80 leading-relaxed">
               Um limite descreve o valor que uma função se aproxima à medida que a variável 
               independente (normalmente <span className="font-mono text-primary">x</span>) se aproxima 
               de um determinado ponto.
@@ -49,7 +49,7 @@ export const WhatIsLimit = () => {
               </h3>
               <div className="space-y-4">
                 <div className="bg-background/20 p-4 rounded-lg">
-                  <div className="text-sm text-muted-foreground mb-2">À medida que x se aproxima de 3:</div>
+                  <div className="text-sm text-foreground/70 mb-2">À medida que x se aproxima de 3:</div>
                   <div className="grid grid-cols-3 gap-2 text-sm">
                     <div>x = 2.9 → f(x) = 5.8</div>
                     <div>x = 2.99 → f(x) = 5.98</div>
