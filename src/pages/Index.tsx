@@ -5,6 +5,7 @@ import InfiniteLimits from "@/components/InfiniteLimits";
 import IndeterminationsSection from "@/components/IndeterminationsSection";
 import { NavigationDots } from "@/components/NavigationDots";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -24,6 +25,9 @@ const Index = () => {
       
       {/* Navigation */}
       <NavigationDots />
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
