@@ -73,7 +73,10 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="text-2xl font-bold">📘 <span className="text-primary">Lim</span><span className="text-foreground">ites</span></div>
+            <div className="text-xl font-heading font-bold">
+              <span className="text-primary">MTN</span>
+              <span className="text-muted-foreground font-medium"> – Matemática Sem Limites</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

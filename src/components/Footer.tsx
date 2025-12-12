@@ -5,28 +5,58 @@ export const Footer = () => {
     <footer className="bg-card border-t border-border py-8">
       <div className="max-w-4xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-foreground font-semibold">
-            📘 Limites
+          <div className="font-heading font-bold text-lg">
+            <span className="text-primary">MTN</span>
+            <span className="text-muted-foreground font-medium text-sm"> – Matemática Sem Limites</span>
+          </div>
+          
+          <div className="flex items-center gap-6 text-sm">
+            <Link 
+              to="/sobre" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Sobre
+            </Link>
+            <Link 
+              to="/recursos" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Recursos
+            </Link>
+            <Link 
+              to="/blog" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Blog
+            </Link>
+            <Link 
+              to="/contato" 
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Contato
+            </Link>
           </div>
           
           <div className="flex items-center gap-6 text-sm">
             <Link 
               to="/politica-privacidade" 
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Política de Privacidade
+              Privacidade
             </Link>
             <Link 
               to="/termos-uso" 
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Termos de Uso
+              Termos
             </Link>
           </div>
-          
-          <div className="text-sm text-muted-foreground">
-            © 2025 Todos os direitos reservados
-          </div>
+        </div>
+        
+        <div className="text-center mt-6 pt-6 border-t border-border">
+          <p className="text-sm text-muted-foreground">
+            © 2025 MTN – Matemática Sem Limites. Todos os direitos reservados.
+          </p>
         </div>
       </div>
     </footer>

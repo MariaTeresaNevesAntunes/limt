@@ -12,12 +12,12 @@ export const HeroSection = () => {
           <TrendingUp className="w-10 h-10 text-primary-glow" />
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary-glow via-accent to-secondary bg-clip-text text-transparent leading-tight">
-          📘 Explora os Limites
+        <h1 className="text-5xl md:text-7xl font-heading font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent leading-tight">
+          MTN – Matemática Sem Limites
         </h1>
         
-        <h2 className="text-2xl md:text-3xl font-semibold text-foreground/90 mb-8">
-          A Fronteira da Matemática
+        <h2 className="text-2xl md:text-3xl font-heading font-semibold text-foreground/90 mb-8">
+          A Fronteira do Conhecimento
         </h2>
         
         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
