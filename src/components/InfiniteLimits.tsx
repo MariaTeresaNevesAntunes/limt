@@ -1,4 +1,63 @@
 import { Card } from "./ui/card";
+import { Quiz } from "./Quiz";
+
+const infiniteLimitsQuestions = [
+  {
+    question: "O que é um limite infinito?",
+    options: [
+      "Um limite que não existe",
+      "Quando a função cresce sem limite ao aproximar-se de um ponto",
+      "Quando x é igual a infinito",
+      "Quando a função é constante"
+    ],
+    correctAnswer: 1,
+    explanation: "Um limite infinito ocorre quando o valor da função cresce (ou decresce) sem limite à medida que nos aproximamos de um ponto."
+  },
+  {
+    question: "Qual é lim(x→0⁺) 1/x?",
+    options: [
+      "0",
+      "1",
+      "+∞",
+      "-∞"
+    ],
+    correctAnswer: 2,
+    explanation: "Quando x se aproxima de 0 pela direita, 1/x cresce sem parar, tendendo para +∞."
+  },
+  {
+    question: "Qual é lim(x→∞) 1/x?",
+    options: [
+      "+∞",
+      "1",
+      "0",
+      "-1"
+    ],
+    correctAnswer: 2,
+    explanation: "À medida que x cresce para infinito, 1/x torna-se cada vez menor, aproximando-se de 0."
+  },
+  {
+    question: "Uma assíntota horizontal indica que:",
+    options: [
+      "A função não está definida",
+      "O limite no infinito é um valor finito",
+      "A função é descontínua",
+      "O limite não existe"
+    ],
+    correctAnswer: 1,
+    explanation: "Uma assíntota horizontal indica que a função se aproxima de um valor finito quando x tende para ±∞."
+  },
+  {
+    question: "Se lim(x→a) f(x) = -∞, a função:",
+    options: [
+      "Cresce sem limite",
+      "Decresce sem limite",
+      "Aproxima-se de zero",
+      "É contínua em a"
+    ],
+    correctAnswer: 1,
+    explanation: "O símbolo -∞ indica que a função decresce sem limite (valores cada vez mais negativos)."
+  }
+];
 
 const InfiniteLimits = () => {
   return (
@@ -71,6 +130,11 @@ const InfiniteLimits = () => {
             </li>
           </ul>
         </Card>
+
+        {/* Quiz Section */}
+        <div className="animate-fade-in mb-12">
+          <Quiz title="📝 Quiz: Limites Infinitos" questions={infiniteLimitsQuestions} />
+        </div>
 
         {/* Frase de apoio */}
         <div className="text-center animate-bounce-gentle">

@@ -1,4 +1,63 @@
 import { Navigation, ArrowLeft, ArrowRight } from "lucide-react";
+import { Quiz } from "./Quiz";
+
+const lateralLimitsQuestions = [
+  {
+    question: "O que significa lim(x→a⁻) f(x)?",
+    options: [
+      "Limite quando x se afasta de a",
+      "Limite quando x se aproxima de a pela esquerda",
+      "Limite quando x se aproxima de a pela direita",
+      "Limite quando x é igual a a"
+    ],
+    correctAnswer: 1,
+    explanation: "O símbolo ⁻ indica que nos aproximamos de a por valores menores (pela esquerda)."
+  },
+  {
+    question: "Para que o limite exista num ponto, os limites laterais devem ser:",
+    options: [
+      "Diferentes",
+      "Iguais",
+      "Infinitos",
+      "Zero"
+    ],
+    correctAnswer: 1,
+    explanation: "O limite só existe se lim(x→a⁻) = lim(x→a⁺), ou seja, os dois limites laterais devem ser iguais."
+  },
+  {
+    question: "Se f(x) = 2 para x < 1 e f(x) = 5 para x ≥ 1, o limite em x = 1:",
+    options: [
+      "É igual a 2",
+      "É igual a 5",
+      "Não existe",
+      "É igual a 3.5"
+    ],
+    correctAnswer: 2,
+    explanation: "Como lim(x→1⁻) = 2 e lim(x→1⁺) = 5 são diferentes, o limite não existe."
+  },
+  {
+    question: "O símbolo + em lim(x→a⁺) significa:",
+    options: [
+      "Soma",
+      "Valor positivo",
+      "Aproximação pela direita",
+      "Limite maior que zero"
+    ],
+    correctAnswer: 2,
+    explanation: "O + indica que nos aproximamos de a por valores maiores (pela direita)."
+  },
+  {
+    question: "Numa função contínua, os limites laterais:",
+    options: [
+      "São sempre diferentes",
+      "Não existem",
+      "São sempre iguais ao valor da função",
+      "São sempre infinitos"
+    ],
+    correctAnswer: 2,
+    explanation: "Numa função contínua, os limites laterais são iguais entre si e iguais ao valor da função nesse ponto."
+  }
+];
 
 export const LateralLimits = () => {
   return (
@@ -67,7 +126,7 @@ export const LateralLimits = () => {
           </div>
         </div>
         
-        <div className="math-card animate-scale-in">
+        <div className="math-card animate-scale-in mb-16">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">📊 Exemplo visual</h3>
             <p className="text-lg text-foreground/80">
@@ -123,6 +182,11 @@ export const LateralLimits = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Quiz Section */}
+        <div className="animate-fade-in">
+          <Quiz title="📝 Quiz: Limites Laterais" questions={lateralLimitsQuestions} />
         </div>
       </div>
     </section>
