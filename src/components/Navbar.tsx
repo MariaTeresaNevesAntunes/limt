@@ -70,7 +70,7 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('hero')}>
-            <div className="text-2xl font-bold text-white">📘 <span className="text-primary">Lim</span>ites</div>
+            <div className="text-2xl font-bold">📘 <span className="text-primary">Lim</span><span className="text-foreground">ites</span></div>
           </div>
 
           {/* Desktop Navigation */}
@@ -78,9 +78,9 @@ export const Navbar = () => {
             {navItems.map(({
             id,
             label
-           }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("text-sm font-medium transition-colors duration-200 hover:text-primary relative", activeSection === id ? "text-white font-semibold" : "text-green-400")}>
+           }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("text-sm font-medium transition-colors duration-200 hover:text-primary relative", activeSection === id ? "text-primary font-semibold" : "text-muted-foreground")}>
                 {label}
-                {activeSection === id && <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white rounded-full" />}
+                {activeSection === id && <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full" />}
               </button>)}
           </div>
 
@@ -98,7 +98,7 @@ export const Navbar = () => {
               {navItems.map(({
             id,
             label
-           }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200", activeSection === id ? "text-white bg-white/10 font-semibold" : "text-green-400 hover:text-primary hover:bg-muted/50")}>
+           }) => <button key={id} onClick={() => scrollToSection(id)} className={cn("block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-colors duration-200", activeSection === id ? "text-primary bg-primary/10 font-semibold" : "text-muted-foreground hover:text-primary hover:bg-muted/50")}>
                   {label}
                 </button>)}
             </div>
