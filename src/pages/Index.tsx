@@ -6,10 +6,15 @@ import IndeterminationsSection from "@/components/IndeterminationsSection";
 import { NavigationDots } from "@/components/NavigationDots";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Limites Matemáticos"
+        description="Plataforma educativa gratuita para aprender limites matemáticos. Explicações claras, exemplos práticos e exercícios sobre limites laterais, infinitos e indeterminações."
+      />
       {/* Navigation Bar */}
       <Navbar />
       {/* Hero Section */}

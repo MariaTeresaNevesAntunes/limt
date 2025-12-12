@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, Video, Link as LinkIcon, Download, ExternalLink } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const resources = {
   videos: [
@@ -67,6 +68,10 @@ const resources = {
 const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Recursos"
+        description="Materiais educativos gratuitos sobre limites matemáticos: vídeos explicativos, PDFs com exercícios resolvidos e links úteis para aprender cálculo."
+      />
       <Navbar />
       
       <main className="pt-24 pb-16">

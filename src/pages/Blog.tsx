@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const articles = [
   {
@@ -64,6 +65,11 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Blog"
+        description="Artigos, dicas e explorações sobre limites matemáticos. Aprende com conteúdos práticos sobre cálculo e matemática."
+        type="blog"
+      />
       <Navbar />
       
       <main className="pt-24 pb-16">
