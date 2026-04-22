@@ -7,6 +7,7 @@ import { SEO } from "@/components/SEO";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
+import { SolvedExercises } from "@/components/SolvedExercises";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
@@ -190,6 +191,9 @@ const Resources = () => {
               })}
             </div>
           </section>
+
+          {/* Solved exercises by theme */}
+          <SolvedExercises onPreview={setPreviewPdf} />
 
           {/* Links Section */}
           <section>
