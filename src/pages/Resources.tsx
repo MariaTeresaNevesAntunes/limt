@@ -43,9 +43,9 @@ const resources = {
     },
     {
       title: "Exercícios Resolvidos",
-      description: "Coleção de 50 exercícios com soluções detalhadas.",
-      url: "#",
-      pages: "25 páginas"
+      description: "Ficha de exercícios de limites de funções para 11.º/12.º ano com resoluções.",
+      url: "/pdfs/exercicios-resolvidos-limites.pdf",
+      pages: "21 páginas"
     },
     {
       title: "Limites Notáveis - Demonstrações",
