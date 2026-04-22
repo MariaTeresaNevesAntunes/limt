@@ -7,6 +7,7 @@ import { SEO } from "@/components/SEO";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
 import { SolvedExercises } from "@/components/SolvedExercises";
+import { AdSense } from "@/components/AdSense";
 
 const resources = {
   videos: [
@@ -185,6 +186,11 @@ const Resources = () => {
 
           {/* Solved exercises by theme */}
           <SolvedExercises onPreview={setPreviewPdf} />
+
+          {/* Anúncio AdSense (modo de teste em desenvolvimento) */}
+          <section className="my-12">
+            <AdSense />
+          </section>
 
           {/* Links Section */}
           <section>
