@@ -187,6 +187,11 @@ const Resources = () => {
           {/* Solved exercises by theme */}
           <SolvedExercises onPreview={setPreviewPdf} />
 
+          {/* Anúncio AdSense (modo de teste em desenvolvimento) */}
+          <section className="my-12">
+            <AdSense />
+          </section>
+
           {/* Links Section */}
           <section>
             <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
