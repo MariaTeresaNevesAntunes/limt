@@ -72,7 +72,7 @@ const PDF_VERSION = "20260422-1035";
 const withPdfVersion = (url: string) => (url.toLowerCase().endsWith(".pdf") ? `${url}?v=${PDF_VERSION}` : url);
 
 const Resources = () => {
-  const [previewPdf, setPreviewPdf] = useState<{ url: string; title: string } | null>(null);
+  const [previewPdf, setPreviewPdf] = useState<{ url: string; title: string; imageUrl?: string } | null>(null);
   const isPreviewable = (url: string) => url.toLowerCase().split("?")[0].endsWith(".pdf");
 
   return (
@@ -214,14 +214,23 @@ const Resources = () => {
           <DialogHeader className="border-b px-6 py-4 pr-14">
             <DialogTitle>{previewPdf?.title ?? "Pré-visualização"}</DialogTitle>
           </DialogHeader>
-          <div className="flex-1 bg-muted/40 p-3 sm:p-4">
+          <div className="flex-1 overflow-auto bg-muted/40 p-3 sm:p-4">
             {previewPdf && (
-              <iframe
-                key={previewPdf.url}
-                src={previewPdf.url}
-                title={previewPdf.title}
-                className="h-full w-full rounded-md border bg-background"
-              />
+              previewPdf.imageUrl ? (
+                <img
+                  src={previewPdf.imageUrl}
+                  alt={`Pré-visualização de ${previewPdf.title}`}
+                  className="mx-auto w-full max-w-5xl rounded-md border bg-background shadow-sm"
+                  loading="lazy"
+                />
+              ) : (
+                <iframe
+                  key={previewPdf.url}
+                  src={previewPdf.url}
+                  title={previewPdf.title}
+                  className="h-full w-full rounded-md border bg-background"
+                />
+              )
             )}
           </div>
         </DialogContent>
