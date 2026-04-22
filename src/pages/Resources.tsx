@@ -73,12 +73,15 @@ const resources = {
   ]
 };
 
+const PDF_VERSION = "20260422-0945";
+const withPdfVersion = (url: string) => (url.toLowerCase().endsWith(".pdf") ? `${url}?v=${PDF_VERSION}` : url);
+
 const Resources = () => {
   const [previewPdf, setPreviewPdf] = useState<{ url: string; title: string } | null>(null);
   const [pdfPageCount, setPdfPageCount] = useState(0);
   const [pdfWidth, setPdfWidth] = useState(0);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
-  const isPreviewable = (url: string) => url.toLowerCase().endsWith(".pdf");
+  const isPreviewable = (url: string) => url.toLowerCase().split("?")[0].endsWith(".pdf");
 
   useEffect(() => {
     if (!previewPdf || !previewContainerRef.current) return;
@@ -150,7 +153,10 @@ const Resources = () => {
               Materiais em PDF
             </h2>
             <div className="grid md:grid-cols-3 gap-4">
-              {resources.pdfs.map((pdf, index) => (
+              {resources.pdfs.map((pdf, index) => {
+                const pdfUrl = withPdfVersion(pdf.url);
+
+                return (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-lg">{pdf.title}</CardTitle>
@@ -160,18 +166,18 @@ const Resources = () => {
                     <div className="flex items-center justify-between gap-2 flex-wrap">
                       <span className="text-xs text-muted-foreground">{pdf.pages}</span>
                       <div className="flex items-center gap-2">
-                        {isPreviewable(pdf.url) && (
+                        {isPreviewable(pdfUrl) && (
                           <Button
                             variant="ghost"
                             size="sm"
-                            onClick={() => setPreviewPdf({ url: pdf.url, title: pdf.title })}
+                            onClick={() => setPreviewPdf({ url: pdfUrl, title: pdf.title })}
                           >
                             <Eye className="h-4 w-4 mr-1" />
                             Pré-visualizar
                           </Button>
                         )}
                         <Button variant="outline" size="sm" asChild>
-                          <a href={pdf.url} download>
+                          <a href={pdfUrl} download>
                             <Download className="h-4 w-4 mr-1" />
                             Download
                           </a>
@@ -180,7 +186,8 @@ const Resources = () => {
                     </div>
                   </CardContent>
                 </Card>
-              ))}
+                );
+              })}
             </div>
           </section>
 
