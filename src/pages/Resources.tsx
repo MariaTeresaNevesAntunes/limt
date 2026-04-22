@@ -217,12 +217,14 @@ const Resources = () => {
           <div className="flex-1 overflow-auto bg-muted/40 p-3 sm:p-4">
             {previewPdf && (
               previewPdf.imageUrl ? (
-                <img
-                  src={previewPdf.imageUrl}
-                  alt={`Pré-visualização de ${previewPdf.title}`}
-                  className="mx-auto w-full max-w-5xl rounded-md border bg-background shadow-sm"
-                  loading="lazy"
-                />
+                <div className="mx-auto flex w-full justify-center">
+                  <img
+                    src={previewPdf.imageUrl}
+                    alt={`Pré-visualização de ${previewPdf.title}`}
+                    className="block h-auto max-w-full rounded-md border bg-background shadow-sm"
+                    loading="lazy"
+                  />
+                </div>
               ) : (
                 <iframe
                   key={previewPdf.url}
