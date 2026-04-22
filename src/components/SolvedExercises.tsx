@@ -16,8 +16,20 @@ type Theme = {
   exercises: SolvedExercise[];
 };
 
+export type PreviewPayload = {
+  title: string;
+  url: string;
+  imageUrl?: string;
+};
+
 const PDF_VERSION = "20260422-1100";
 const withVersion = (url: string) => `${url}?v=${PDF_VERSION}`;
+const getPreviewImage = (url: string) => {
+  const match = url.match(/^\/pdfs\/exercicios\/([^/]+)\/([^/]+)\.pdf$/);
+  if (!match) return undefined;
+  const [, theme, slug] = match;
+  return withVersion(`/pdf-previews/exercicios/${theme}-${slug}.png`);
+};
 
 export const solvedExercisesData: Theme[] = [
   {
@@ -104,7 +116,7 @@ export const solvedExercisesData: Theme[] = [
 ];
 
 type Props = {
-  onPreview: (pdf: { url: string; title: string }) => void;
+  onPreview: (pdf: PreviewPayload) => void;
 };
 
 export const SolvedExercises = ({ onPreview }: Props) => {
@@ -146,7 +158,11 @@ export const SolvedExercises = ({ onPreview }: Props) => {
                         <Button
                           variant="ghost"
                           size="sm"
-                          onClick={() => onPreview({ url: versioned, title: ex.title })}
+                          onClick={() => onPreview({
+                            url: versioned,
+                            title: ex.title,
+                            imageUrl: getPreviewImage(ex.url),
+                          })}
                         >
                           <Eye className="h-4 w-4 mr-1" />
                           Visualizar
