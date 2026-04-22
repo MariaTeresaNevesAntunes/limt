@@ -5,7 +5,13 @@ import { Button } from "@/components/ui/button";
 import { FileText, Video, Link as LinkIcon, Download, ExternalLink, Eye } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Document, Page, pdfjs } from "react-pdf";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url,
+).toString();
 
 const resources = {
   videos: [
@@ -69,7 +75,24 @@ const resources = {
 
 const Resources = () => {
   const [previewPdf, setPreviewPdf] = useState<{ url: string; title: string } | null>(null);
+  const [pdfPageCount, setPdfPageCount] = useState(0);
+  const [pdfWidth, setPdfWidth] = useState(0);
+  const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const isPreviewable = (url: string) => url.toLowerCase().endsWith(".pdf");
+
+  useEffect(() => {
+    if (!previewPdf || !previewContainerRef.current) return;
+
+    const container = previewContainerRef.current;
+    const updateWidth = () => setPdfWidth(Math.max(container.clientWidth - 24, 280));
+
+    updateWidth();
+
+    const resizeObserver = new ResizeObserver(updateWidth);
+    resizeObserver.observe(container);
+
+    return () => resizeObserver.disconnect();
+  }, [previewPdf]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -191,18 +214,44 @@ const Resources = () => {
 
       <Footer />
 
-      <Dialog open={!!previewPdf} onOpenChange={(open) => !open && setPreviewPdf(null)}>
-        <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 flex flex-col">
-          <DialogHeader className="px-6 py-4 border-b">
+      <Dialog
+        open={!!previewPdf}
+        onOpenChange={(open) => {
+          if (!open) {
+            setPreviewPdf(null);
+            setPdfPageCount(0);
+          }
+        }}
+      >
+        <DialogContent className="flex h-[96vh] w-[98vw] max-w-7xl flex-col overflow-hidden p-0">
+          <DialogHeader className="border-b px-6 py-4 pr-14">
             <DialogTitle>{previewPdf?.title ?? "Pré-visualização"}</DialogTitle>
           </DialogHeader>
-          <div className="flex-1 bg-muted">
+          <div className="flex-1 overflow-auto bg-muted/40 px-3 py-4 sm:px-6">
             {previewPdf && (
-              <iframe
-                src={`${previewPdf.url}#view=FitH`}
-                title={previewPdf.title}
-                className="w-full h-full"
-              />
+              <div ref={previewContainerRef} className="mx-auto w-full max-w-5xl">
+                <Document
+                  file={previewPdf.url}
+                  loading={<p className="py-12 text-center text-sm text-muted-foreground">A carregar PDF…</p>}
+                  error={<p className="py-12 text-center text-sm text-muted-foreground">Não foi possível abrir o PDF.</p>}
+                  onLoadSuccess={({ numPages }: { numPages: number }) => setPdfPageCount(numPages)}
+                >
+                  <div className="space-y-4">
+                    {Array.from({ length: pdfPageCount }, (_, index) => (
+                      <div key={index} className="overflow-hidden rounded-md border bg-background shadow-sm">
+                        <Page
+                          pageNumber={index + 1}
+                          width={pdfWidth || undefined}
+                          renderAnnotationLayer={false}
+                          renderTextLayer={false}
+                          loading=""
+                          className="mx-auto"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </Document>
+              </div>
             )}
           </div>
         </DialogContent>
