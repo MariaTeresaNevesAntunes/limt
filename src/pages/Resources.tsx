@@ -7,6 +7,7 @@ import { SEO } from "@/components/SEO";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useState } from "react";
 import { SolvedExercises } from "@/components/SolvedExercises";
+import { AdSense } from "@/components/AdSense";
 
 const resources = {
   videos: [
