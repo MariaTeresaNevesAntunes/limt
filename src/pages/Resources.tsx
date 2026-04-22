@@ -2,8 +2,10 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, Video, Link as LinkIcon, Download, ExternalLink } from "lucide-react";
+import { FileText, Video, Link as LinkIcon, Download, ExternalLink, Eye } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useState } from "react";
 
 const resources = {
   videos: [
@@ -66,6 +68,9 @@ const resources = {
 };
 
 const Resources = () => {
+  const [previewPdf, setPreviewPdf] = useState<{ url: string; title: string } | null>(null);
+  const isPreviewable = (url: string) => url.toLowerCase().endsWith(".pdf");
+
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -129,14 +134,26 @@ const Resources = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground text-sm mb-4">{pdf.description}</p>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between gap-2 flex-wrap">
                       <span className="text-xs text-muted-foreground">{pdf.pages}</span>
-                      <Button variant="outline" size="sm" asChild>
-                        <a href={pdf.url} download>
-                          <Download className="h-4 w-4 mr-1" />
-                          Download
-                        </a>
-                      </Button>
+                      <div className="flex items-center gap-2">
+                        {isPreviewable(pdf.url) && (
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={() => setPreviewPdf({ url: pdf.url, title: pdf.title })}
+                          >
+                            <Eye className="h-4 w-4 mr-1" />
+                            Pré-visualizar
+                          </Button>
+                        )}
+                        <Button variant="outline" size="sm" asChild>
+                          <a href={pdf.url} download>
+                            <Download className="h-4 w-4 mr-1" />
+                            Download
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -173,6 +190,23 @@ const Resources = () => {
       </main>
 
       <Footer />
+
+      <Dialog open={!!previewPdf} onOpenChange={(open) => !open && setPreviewPdf(null)}>
+        <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 flex flex-col">
+          <DialogHeader className="px-6 py-4 border-b">
+            <DialogTitle>{previewPdf?.title ?? "Pré-visualização"}</DialogTitle>
+          </DialogHeader>
+          <div className="flex-1 bg-muted">
+            {previewPdf && (
+              <iframe
+                src={`${previewPdf.url}#view=FitH`}
+                title={previewPdf.title}
+                className="w-full h-full"
+              />
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
