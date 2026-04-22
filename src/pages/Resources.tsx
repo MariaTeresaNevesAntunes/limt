@@ -5,11 +5,8 @@ import { Button } from "@/components/ui/button";
 import { FileText, Video, Link as LinkIcon, Download, ExternalLink, Eye } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { useEffect, useRef, useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
+import { useState } from "react";
 import { SolvedExercises } from "@/components/SolvedExercises";
-
-pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const resources = {
   videos: [
@@ -71,29 +68,12 @@ const resources = {
   ]
 };
 
-const PDF_VERSION = "20260422-0945";
+const PDF_VERSION = "20260422-1035";
 const withPdfVersion = (url: string) => (url.toLowerCase().endsWith(".pdf") ? `${url}?v=${PDF_VERSION}` : url);
 
 const Resources = () => {
   const [previewPdf, setPreviewPdf] = useState<{ url: string; title: string } | null>(null);
-  const [pdfPageCount, setPdfPageCount] = useState(0);
-  const [pdfWidth, setPdfWidth] = useState(0);
-  const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const isPreviewable = (url: string) => url.toLowerCase().split("?")[0].endsWith(".pdf");
-
-  useEffect(() => {
-    if (!previewPdf || !previewContainerRef.current) return;
-
-    const container = previewContainerRef.current;
-    const updateWidth = () => setPdfWidth(Math.max(container.clientWidth - 24, 280));
-
-    updateWidth();
-
-    const resizeObserver = new ResizeObserver(updateWidth);
-    resizeObserver.observe(container);
-
-    return () => resizeObserver.disconnect();
-  }, [previewPdf]);
 
   return (
     <div className="min-h-screen bg-background">
