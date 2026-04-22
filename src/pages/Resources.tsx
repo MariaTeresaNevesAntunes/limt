@@ -76,6 +76,9 @@ const PDF_PREVIEW_IMAGES: Record<string, string[]> = {
     "/pdf-previews/resumo-formulas-limites-1.png",
     "/pdf-previews/resumo-formulas-limites-2.png",
   ],
+  "/pdfs/exercicios-resolvidos-limites.pdf": Array.from({ length: 21 }, (_, i) =>
+    `/pdf-previews/exercicios-resolvidos-limites-${String(i + 1).padStart(2, "0")}.png`
+  ),
 };
 
 const Resources = () => {
