@@ -29,9 +29,9 @@ const resources = {
   pdfs: [
     {
       title: "Resumo de Fórmulas de Limites",
-      description: "PDF com todas as fórmulas essenciais.",
-      url: "#",
-      pages: "5 páginas"
+      description: "Propriedades básicas, limites fundamentais, L'Hôpital e limites trigonométricos.",
+      url: "/pdfs/resumo-formulas-limites.pdf",
+      pages: "2 páginas"
     },
     {
       title: "Exercícios Resolvidos",
