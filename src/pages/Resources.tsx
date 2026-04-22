@@ -68,11 +68,18 @@ const resources = {
   ]
 };
 
-const PDF_VERSION = "20260422-1035";
+const PDF_VERSION = "20260422-1135";
 const withPdfVersion = (url: string) => (url.toLowerCase().endsWith(".pdf") ? `${url}?v=${PDF_VERSION}` : url);
 
+const PDF_PREVIEW_IMAGES: Record<string, string[]> = {
+  "/pdfs/resumo-formulas-limites.pdf": [
+    "/pdf-previews/resumo-formulas-limites-1.png",
+    "/pdf-previews/resumo-formulas-limites-2.png",
+  ],
+};
+
 const Resources = () => {
-  const [previewPdf, setPreviewPdf] = useState<{ url: string; title: string; imageUrl?: string } | null>(null);
+  const [previewPdf, setPreviewPdf] = useState<{ url: string; title: string; imageUrl?: string; images?: string[] } | null>(null);
   const isPreviewable = (url: string) => url.toLowerCase().split("?")[0].endsWith(".pdf");
 
   return (
@@ -148,7 +155,11 @@ const Resources = () => {
                           <Button
                             variant="ghost"
                             size="sm"
-                            onClick={() => setPreviewPdf({ url: pdfUrl, title: pdf.title })}
+                            onClick={() => setPreviewPdf({
+                              url: pdfUrl,
+                              title: pdf.title,
+                              images: PDF_PREVIEW_IMAGES[pdf.url]?.map((img) => withPdfVersion(img.replace(/\.png$/i, ".png"))),
+                            })}
                           >
                             <Eye className="h-4 w-4 mr-1" />
                             Pré-visualizar
@@ -215,25 +226,32 @@ const Resources = () => {
             <DialogTitle>{previewPdf?.title ?? "Pré-visualização"}</DialogTitle>
           </DialogHeader>
           <div className="flex-1 overflow-auto bg-muted/40 p-3 sm:p-4">
-            {previewPdf && (
-              previewPdf.imageUrl ? (
-                <div className="mx-auto flex w-full justify-center">
-                  <img
-                    src={previewPdf.imageUrl}
-                    alt={`Pré-visualização de ${previewPdf.title}`}
-                    className="block h-auto max-w-full rounded-md border bg-background shadow-sm"
-                    loading="lazy"
-                  />
-                </div>
-              ) : (
+            {previewPdf && (() => {
+              const images = previewPdf.images ?? (previewPdf.imageUrl ? [previewPdf.imageUrl] : []);
+              if (images.length > 0) {
+                return (
+                  <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-4">
+                    {images.map((img, idx) => (
+                      <img
+                        key={img}
+                        src={img}
+                        alt={`Pré-visualização de ${previewPdf.title} — página ${idx + 1}`}
+                        className="block h-auto max-w-full rounded-md border bg-background shadow-sm"
+                        loading="lazy"
+                      />
+                    ))}
+                  </div>
+                );
+              }
+              return (
                 <iframe
                   key={previewPdf.url}
                   src={previewPdf.url}
                   title={previewPdf.title}
                   className="h-full w-full rounded-md border bg-background"
                 />
-              )
-            )}
+              );
+            })()}
           </div>
         </DialogContent>
       </Dialog>
