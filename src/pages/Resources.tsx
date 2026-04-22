@@ -207,7 +207,6 @@ const Resources = () => {
         onOpenChange={(open) => {
           if (!open) {
             setPreviewPdf(null);
-            setPdfPageCount(0);
           }
         }}
       >
@@ -215,31 +214,14 @@ const Resources = () => {
           <DialogHeader className="border-b px-6 py-4 pr-14">
             <DialogTitle>{previewPdf?.title ?? "Pré-visualização"}</DialogTitle>
           </DialogHeader>
-          <div className="flex-1 overflow-auto bg-muted/40 px-3 py-4 sm:px-6">
+          <div className="flex-1 bg-muted/40 p-3 sm:p-4">
             {previewPdf && (
-              <div ref={previewContainerRef} className="mx-auto w-full max-w-5xl">
-                <Document
-                  file={previewPdf.url}
-                  loading={<p className="py-12 text-center text-sm text-muted-foreground">A carregar PDF…</p>}
-                  error={<p className="py-12 text-center text-sm text-muted-foreground">Não foi possível abrir o PDF.</p>}
-                  onLoadSuccess={({ numPages }: { numPages: number }) => setPdfPageCount(numPages)}
-                >
-                  <div className="space-y-4">
-                    {Array.from({ length: pdfPageCount }, (_, index) => (
-                      <div key={index} className="overflow-hidden rounded-md border bg-background shadow-sm">
-                        <Page
-                          pageNumber={index + 1}
-                          width={pdfWidth || undefined}
-                          renderAnnotationLayer={false}
-                          renderTextLayer={false}
-                          loading=""
-                          className="mx-auto"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </Document>
-              </div>
+              <iframe
+                key={previewPdf.url}
+                src={previewPdf.url}
+                title={previewPdf.title}
+                className="h-full w-full rounded-md border bg-background"
+              />
             )}
           </div>
         </DialogContent>
