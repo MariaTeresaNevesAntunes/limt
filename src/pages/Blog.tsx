@@ -5,54 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
-
-const articles = [
-  {
-    id: 1,
-    title: "A Importância dos Limites no Cálculo",
-    excerpt: "Descobre porque os limites são a base fundamental do cálculo diferencial e integral, e como este conceito revolucionou a matemática moderna.",
-    date: "2024-12-10",
-    readTime: "5 min",
-    category: "Fundamentos",
-    slug: "importancia-limites-calculo"
-  },
-  {
-    id: 2,
-    title: "5 Erros Comuns ao Calcular Limites",
-    excerpt: "Evita os erros mais frequentes que os estudantes cometem ao resolver problemas de limites. Dicas práticas e exemplos.",
-    date: "2024-12-05",
-    readTime: "7 min",
-    category: "Dicas",
-    slug: "erros-comuns-limites"
-  },
-  {
-    id: 3,
-    title: "Limites e o Conceito de Infinito",
-    excerpt: "Uma exploração filosófica e matemática do conceito de infinito através dos limites. Como os matemáticos dominaram o infinito.",
-    date: "2024-11-28",
-    readTime: "8 min",
-    category: "Teoria",
-    slug: "limites-conceito-infinito"
-  },
-  {
-    id: 4,
-    title: "Aplicações Práticas dos Limites",
-    excerpt: "De física a economia, descobre como os limites são usados no mundo real para resolver problemas práticos.",
-    date: "2024-11-20",
-    readTime: "6 min",
-    category: "Aplicações",
-    slug: "aplicacoes-praticas-limites"
-  },
-  {
-    id: 5,
-    title: "História do Cálculo: De Newton a Cauchy",
-    excerpt: "A fascinante história de como o conceito de limite evoluiu ao longo dos séculos, desde as primeiras ideias até a definição rigorosa.",
-    date: "2024-11-15",
-    readTime: "10 min",
-    category: "História",
-    slug: "historia-calculo-newton-cauchy"
-  }
-];
+import { articles } from "@/data/articles";
 
 const Blog = () => {
   const formatDate = (dateString: string) => {
