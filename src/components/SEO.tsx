@@ -25,7 +25,7 @@ export const SEO = ({
 }: SEOProps) => {
   const location = useLocation();
   const siteTitle = "MTNA – Matemática Sem Limites";
-  const fullTitle = title.includes(siteTitle) ? title : `${title} | ${siteTitle}`;
+  const fullTitle = title.startsWith("MTNA") ? title : `${title} | ${siteTitle}`;
 
   const path = canonical ?? location.pathname;
   const url = path.startsWith("http") ? path : `${SITE_URL}${path}`;
