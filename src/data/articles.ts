@@ -652,6 +652,6 @@ Se f é contínua em [a, b] e f(a) e f(b) têm sinais contrários, então existe
 ## Resumo
 
 A continuidade é o teste que confirma se o limite e o valor da função concordam. Domina as três condições, aprende a classificar as descontinuidades e ganhas simultaneamente uma ferramenta de cálculo (substituição direta) e uma ferramenta de demonstração (Bolzano).
-\`,
+`,
   },
 ];
