@@ -14,19 +14,19 @@ const resources = {
     {
       title: "Introdução aos Limites",
       description: "Vídeo explicativo sobre o conceito básico de limite.",
-      url: "#",
+      url: "https://pt.khanacademy.org/math/calculus-1/cs1-limits-and-continuity",
       duration: "15 min"
     },
     {
       title: "Limites Laterais Explicados",
       description: "Como calcular e interpretar limites laterais.",
-      url: "#",
+      url: "https://pt.khanacademy.org/math/calculus-1/cs1-limits-and-continuity/cs1-estimating-limit-values-from-graphs",
       duration: "12 min"
     },
     {
       title: "Resolvendo Indeterminações",
       description: "Técnicas para resolver formas indeterminadas.",
-      url: "#",
+      url: "https://pt.khanacademy.org/math/calculus-1/cs1-limits-and-continuity/cs1-determining-limits-using-algebraic-manipulation",
       duration: "20 min"
     }
   ],
@@ -42,12 +42,6 @@ const resources = {
       description: "Ficha de exercícios de limites de funções para 11.º/12.º ano com resoluções.",
       url: "/pdfs/exercicios-resolvidos-limites.pdf",
       pages: "21 páginas"
-    },
-    {
-      title: "Limites Notáveis - Demonstrações",
-      description: "Demonstrações matemáticas dos limites notáveis.",
-      url: "#",
-      pages: "10 páginas"
     }
   ],
   links: [
