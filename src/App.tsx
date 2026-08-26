@@ -12,6 +12,7 @@ import Resources from "./pages/Resources";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
+import FundamentalLimits from "./pages/FundamentalLimits";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/sobre" element={<About />} />
           <Route path="/recursos" element={<Resources />} />
+          <Route path="/limites-fundamentais" element={<FundamentalLimits />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contato" element={<Contact />} />
