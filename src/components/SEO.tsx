@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
-const SITE_URL = "https://mtnaweblimites.com";
+const SITE_URL = "https://limt.info";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 interface SEOProps {
@@ -25,7 +25,9 @@ export const SEO = ({
 }: SEOProps) => {
   const location = useLocation();
   const siteTitle = "MTNA – Matemática Sem Limites";
-  const fullTitle = title.startsWith("MTNA") ? title : `${title} | ${siteTitle}`;
+  const fullTitle = title.startsWith("MTNA")
+    ? title
+    : `${title} | ${siteTitle}`;
 
   const path = canonical ?? location.pathname;
   const url = path.startsWith("http") ? path : `${SITE_URL}${path}`;

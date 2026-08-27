@@ -4,11 +4,18 @@ import { writeFileSync } from "fs";
 import { resolve } from "path";
 import { articles } from "../src/data/articles";
 
-const BASE_URL = "https://mtnaweblimites.com";
+const BASE_URL = "https://limt.info";
 
 interface SitemapEntry {
   path: string;
-  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
+  changefreq?:
+    | "always"
+    | "hourly"
+    | "daily"
+    | "weekly"
+    | "monthly"
+    | "yearly"
+    | "never";
   priority?: string;
 }
 
