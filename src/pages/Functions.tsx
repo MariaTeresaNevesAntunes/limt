@@ -90,7 +90,7 @@ const Functions = () => {
           {/* 1. Definição */}
           <TabsContent value="definicao" forceMount className={tabContentClass}>
             <Card>
-              <CardHeader><CardTitle as-child="true"><h2 className="font-heading text-2xl">1. O que é uma Função?</h2></CardTitle></CardHeader>
+              <CardHeader><CardTitle><h2 className="font-heading text-2xl">1. O que é uma Função?</h2></CardTitle></CardHeader>
               <CardContent className="space-y-4 leading-relaxed text-foreground/85">
                 <p>
                   Imagina uma <strong>máquina mágica de processar números</strong>. Tem uma porta de entrada, um motor lá dentro que segue sempre a mesma regra, e uma porta de saída. Tu colocas um número na entrada, a máquina trabalha e, do outro lado, sai um novo número. Uma função é exatamente isto: uma regra que transforma cada número que entra em <strong>um e um só</strong> número que sai.
