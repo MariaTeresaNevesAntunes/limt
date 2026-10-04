@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import FundamentalLimits from "./pages/FundamentalLimits";
+import Functions from "./pages/Functions";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/sobre" element={<About />} />
           <Route path="/recursos" element={<Resources />} />
           <Route path="/limites-fundamentais" element={<FundamentalLimits />} />
+          <Route path="/funcoes" element={<Functions />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contato" element={<Contact />} />
