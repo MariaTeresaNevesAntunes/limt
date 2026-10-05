@@ -36,9 +36,8 @@ jobs:
       - name: Add GitHub Pages 404 page
         run: cp dist/index.html dist/404.html
 
-
-
       - name: Setup Pages
+
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
